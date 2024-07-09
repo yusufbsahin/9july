@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>8 July Progress</title>
+  <link rel="icon" type="image/x-icon" href="favicon(1).ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      background-color: #b3e0ff;
+      text-align: center;
+      font-size: 50px;
+      margin: 0 0 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    h3 {
+      background-color: #b3e0ff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], 
+    input[type="password"], 
+    input[type="color"], 
+    input[type="search"], 
+    input[type="date"], 
+    input[type="email"], 
+    input[type="number"], 
+    input[type="range"], 
+    input[type="tel"], 
+    input[type="time"], 
+    input[type="file"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"], 
+    input[type="reset"], 
+    input[type="image"] {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    small {
+      display: block;
+      margin-bottom: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Progress</h1>
+    <h2>Here are the new things I have learned on 8 July:</h2>
+    <br>
+    <h3>Password field</h3>
+    <form>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Reset Button</h3>
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+    <br>
+    <h3>Color Picker</h3>
+    <form>
+      <label for="favcolor">Select a color:</label>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Search Field</h3>
+    <form action="https://www.google.com/search" method="get">
+      <label for="gsearch">Search Google:</label>
+      <input type="search" id="gsearch" name="q">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Date Field</h3>
+    <form>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Email Field</h3>
+    <form>
+      <label for="email">Enter email address:</label>
+      <input type="email" id="email" name="email">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Displaying an Image as the Submit button</h3>
+    <form>
+      <label for="fname">First name: </label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name: </label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="image" src="pngwing.com.png" alt="Submit" width="48" height="48">
+    </form>
+    <br>
+    <h3>File upload</h3>
+    <form>
+      <label for="myfile">Select a file:</label>
+      <input type="file" id="myfile" name="myfile"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Number Field</h3>
+    <form>
+      <label for="quantity">Quantity (between 1 and 10):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Range Field</h3>
+    <form method="get">
+      <label for="ran">Range (between 0 and 100):</label>
+      <input type="range" id="ran" name="ran" min="0" max="100">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Telephone Field</h3>
+    <form>
+      <label for="phone">Enter a phone number:</label><br><br>
+      <input type="tel" id="phone" name="phone" placeholder="5xx xxx xxxx" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required><br><br>
+      <small>Format: 5XX XXX XXXX</small><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Show a Time Input Control</h3>
+    <form>
+      <label for="appt">Select a time:</label>
+      <input type="time" id="appt" name="appt">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>The input disabled and readonly attributes</h3>
+    <p>The disabled attribute specifies that an input field should be disabled (unusable and un-clickable):</p>
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="Yusuf Baha" disabled><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Şahin" readonly><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>The input formmethod Attribute</h3>
+    <form method="get" target="_blank">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit using GET">
+      <input type="submit" formmethod="post" value="Submit using POST">
+    </form>
+    <br>
+    <h3>The input formtarget attribute</h3>
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+    </form>
+    <br>
+    <h3>The input formnovalidate attribute</h3>
+    <form>
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+    </form>
+  </div>
+</body>
+</html>

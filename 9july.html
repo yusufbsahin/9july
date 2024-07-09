@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>9 July Progress</title>
+  <link rel="icon" type="image/x-icon" href="favicon(1).ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      background-color: lightgreen;
+      text-align: center;
+      font-size: 50px;
+      margin: 0 0 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    h3 {
+      background-color: lightgreen;
+      padding: 10px;
+      border-radius: 4px;
+    } <!--
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], 
+    input[type="password"], 
+    input[type="color"], 
+    input[type="search"], 
+    input[type="date"], 
+    input[type="email"], 
+    input[type="number"], 
+    input[type="range"], 
+    input[type="tel"], 
+    input[type="time"], 
+    input[type="file"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"], 
+    input[type="reset"], 
+    input[type="image"] {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    small {
+      display: block;
+      margin-bottom: 10px;
+      color: #666;
+    } -->
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Progress</h1>
+    <h2>Here are the new things I have learned on 9 July:</h2>
+    <br>
+    <h3>Drawing a Circle and a Line Using Canvas</h3>
+<canvas id="Canvas1" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+ <script>
+  var c = document.getElementById("Canvas1");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(95,50,40,0,2*Math.PI);
+  ctx.stroke();
+  ctx.moveTo(0,0);
+  ctx.lineTo(200,100);
+  ctx.stroke();
+ </script> 
+    <br>
+    <h3>Drawing a Circular Gradient and Putting a Stroke Text inside of the Canvas</h3>
+<canvas id="Canvas2" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+var c = document.getElementById("Canvas2");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createRadialGradient(95,50,5,90,60,120);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"blue");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,200,100);
+
+ctx.font = "28px Arial";
+ctx.strokeText("Hello World",10,50);
+</script>
+    <br>
+    <h3>Drawing an Image</h3>
+<p>Image to use:</p>
+<img id="jerusalem" src="9055.png" alt="Jerusalem Recaptured by Selahaddin Eyyubi" width="420" height="277">
+<br><br>
+<p>Canvas to fill:</p>
+<canvas id="Canvas3" width="1020" height="590"
+style="border:1px solid #d3d3d3;"></canvas>
+
+<p><button onclick="Canvas3()">Draw</button></p>
+
+<script>
+function Canvas3() {
+  var c = document.getElementById("Canvas3");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("jerusalem");
+  ctx.drawImage(img,10,10);
+}
+</script>
+    <br>
+    <h3>Use of SVG Graphics Examples</h3>
+<svg height="130" width="500">
+  <defs>
+    <linearGradient id="grad1">
+      <stop offset="0%" stop-color="lightblue" />
+      <stop offset="100%" stop-color="red" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">YBŞ</text></svg>
+
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:red;stroke:black;stroke-width:5;fill-rule:evenodd;" /></svg>
+    <br>
+    <h3>Video</h3>
+<video width="620" height="420" controls>
+  <source src="GTAIV 2021-08-06 22-20-57.mp4" type="video/mp4">
+</video>
+    <br>
+    <h3>Audio</h3>
+<audio controls>
+  <source src="example_TTS.wav" type="audio/wav">
+</audio>
+    <br>
+    <h3>Use Example of Object Attribute</h3>
+<object width="100%" height="500px" data="8julycentered.html"></object>
+    <br>
+    <h3>Use Example of Embed Attribute</h3>
+<embed src="GTAIV 2021-08-06 22-20-57.mp4">
+    <br>
+    <h3>YouTube</h3>
+<iframe width="620" height="345" src="https://youtu.be/8Q-tqsMJxrA?si=V05UgAu1OfmHbwy4">
+</iframe>
+
+  </div>
+</body>
+</html>
